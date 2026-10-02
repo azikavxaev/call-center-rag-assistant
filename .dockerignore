@@ -1,0 +1,11 @@
+# Secrets: pass OPENAI_API_KEY at runtime instead.
+.env
+
+.venv/
+.vscode/
+__pycache__/
+*.pyc
+.DS_Store
+Dockerfile
+.dockerignore
+CLAUDE.md

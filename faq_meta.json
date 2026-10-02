@@ -1,0 +1,271 @@
+{
+  "items": [
+    {
+      "id": "t1_q1",
+      "topic": "Discipline and Query Answering Rules",
+      "qnum": 1,
+      "question": "Which language should the operator speak and answer the call?",
+      "answer": "According to clause 3.1.1 of the Contact Center division instructions, when answering a\ncall, the Operator must politely greet and listen carefully in the corresponding language\nselected in the IVR menu."
+    },
+    {
+      "id": "t1_q2",
+      "topic": "Discipline and Query Answering Rules",
+      "qnum": 2,
+      "question": "Should the operator state their surname?",
+      "answer": "If the customer insists, the operator must also provide their surname."
+    },
+    {
+      "id": "t1_q3",
+      "topic": "Discipline and Query Answering Rules",
+      "qnum": 3,
+      "question": "Should the operator offer additional help at the end of the call?",
+      "answer": "According to clause 3.1.2 of the Contact Center division instructions, at the end of the\nconversation, the operator must clarify whether the customer has any additional\nquestions. If the customer has no additional questions, it is necessary to thank them for\nthe call and say goodbye (e.g., \"Thank you for your call, goodbye\")."
+    },
+    {
+      "id": "t1_q4",
+      "topic": "Discipline and Query Answering Rules",
+      "qnum": 4,
+      "question": "Should they ask if there are additional questions at the end of the call?",
+      "answer": "According to clause 3.1.2 of the Contact Center division instructions, at the end of the\nconversation, the operator must clarify whether the customer has any additional\nquestions. If the customer has no additional questions, it is necessary to thank them for\nthe call and say goodbye (e.g., \"Thank you for your call, goodbye\")."
+    },
+    {
+      "id": "t1_q5",
+      "topic": "Discipline and Query Answering Rules",
+      "qnum": 5,
+      "question": "When should I answer the call?",
+      "answer": "According to clause 3.2.1 of the Contact Center division instructions, it is desirable to\nanswer the incoming call after the first ring, and it is mandatory by the third ring."
+    },
+    {
+      "id": "t1_q6",
+      "topic": "Discipline and Query Answering Rules",
+      "qnum": 6,
+      "question": "What information can be provided to the customer when they call?",
+      "answer": "According to clause 3.2.2 of the Contact Center division instructions, when a customer\nwants to get information about their payment cards and related services, as well as other\nbank products, the operator must provide all types of information that do not require\ncustomer identification, do not contradict the Company's internal rules, are covered by the\nprocedures of the Contact Center division, and do not constitute bank secrecy."
+    },
+    {
+      "id": "t1_q7",
+      "topic": "Discipline and Query Answering Rules",
+      "qnum": 7,
+      "question": "How should I talk to the customer, and how should I behave?",
+      "answer": "According to clause 3.2.3 of the Contact Center division instructions, the Operator must\nspeak politely with the customer, never raise their voice, avoid using unethical words,\nrefrain from expressing dissatisfaction, mocking, or treating them with criticism. They\nshould try to assist the applying customer, help eliminate problems related to card usage,\nand provide information about instances that can be applied to in any situation. The\nOperator must always be attentive to their interlocutor and ensure the provided\ninformation is understood correctly. The tone of voice should be clear and fluent, and they\nmust speak confidently at a volume the customer can hear. Speech must be rhythmic, and\nlong pauses should not be allowed."
+    },
+    {
+      "id": "t1_q8",
+      "topic": "Discipline and Query Answering Rules",
+      "qnum": 8,
+      "question": "Is there a communication standard for speaking with the customer?",
+      "answer": "According to clause 3.2.3 of the Contact Center division instructions, the Operator must\nspeak politely with the customer, never raise their voice, avoid using unethical words,\nrefrain from expressing dissatisfaction, mocking, or treating them with criticism. They\nshould try to assist the applying customer, help eliminate problems related to card usage,\nand provide information about instances that can be applied to in any situation. The\nOperator must always be attentive to their interlocutor and ensure the provided\ninformation is understood correctly. The tone of voice should be clear and fluent, and they\nmust speak confidently at a volume the customer can hear. Speech must be rhythmic, and\nlong pauses should not be allowed."
+    },
+    {
+      "id": "t2_q1",
+      "topic": "Identification Rules. Identification",
+      "qnum": 1,
+      "question": "What is identification?",
+      "answer": "According to clause 4.1.1 of the Contact Center division instructions, identification is the\nprocess of matching the name, surname, full card number, and codeword provided by the\ncardholder with the data in the system. To pass identification, the customer must provide\nthe required information without errors. The execution of requests entering the Customer\nService Department and answering questions related to the card is possible only if the\ncustomer is identified by a codeword or a one-time password replacing the codeword. A\nnumber of exceptions to this process are explained in the Contact Center division\nprocedure."
+    },
+    {
+      "id": "t2_q2",
+      "topic": "Identification Rules. Identification",
+      "qnum": 2,
+      "question": "What information is required during identification?",
+      "answer": "According to the Contact Center division instructions, the name, surname, full card\nnumber, and codeword are required from the customer during identification. This\ninformation is checked by comparing it with the data available in the system. If any of the\ninformation is not provided correctly, the identification is considered unsuccessful, and\nthe execution of the request becomes impossible."
+    },
+    {
+      "id": "t2_q3",
+      "topic": "Identification Rules. Identification",
+      "qnum": 3,
+      "question": "Is identification possible without a codeword?",
+      "answer": "In the absence of a codeword, identification can only be carried out via a one-time\npassword (OTP) replacing the codeword. The one-time password is sent to the customer's\ncontact means registered in the system and is valid only for a certain period. If this\npassword is provided correctly, the customer is considered identified."
+    },
+    {
+      "id": "t2_q4",
+      "topic": "Identification Rules. Identification",
+      "qnum": 4,
+      "question": "What information can be provided to a customer who fails identification?",
+      "answer": "No confidential information related to the card or account is provided to a customer who\nfails identification. In this case, only general information and procedure rules can be\nexplained to the customer. Card transactions and answering questions are only possible\nafter full identification."
+    },
+    {
+      "id": "t2_q5",
+      "topic": "Identification Rules. Identification",
+      "qnum": 5,
+      "question": "Are there exceptions in the identification process?",
+      "answer": "Exceptions to the identification process are specifically indicated in the procedure of the\nContact Center division. These exceptions are intended for certain services and special\nsituations and can only be applied in accordance with the instructions. The operator must\ncheck the relevant procedure requirements before applying exceptional cases."
+    },
+    {
+      "id": "t3_q1",
+      "topic": "Call Center Operations Q&A",
+      "qnum": 1,
+      "question": "How should an operator place a customer on hold?",
+      "answer": "Before placing a customer on hold, the operator must ask for the customer's permission,\nexplain exactly why the hold is necessary (e.g., \"May I place you on a brief hold while I\ncheck your account history?\"), and wait for the customer's affirmative response."
+    },
+    {
+      "id": "t3_q2",
+      "topic": "Call Center Operations Q&A",
+      "qnum": 2,
+      "question": "What is the maximum allowed hold time?",
+      "answer": "A customer should not be left on hold for more than 2 minutes without an update. If the\nissue requires more time, the operator must return to the line, inform the customer of the\ndelay, and ask if they wish to continue holding or prefer a callback."
+    },
+    {
+      "id": "t3_q3",
+      "topic": "Call Center Operations Q&A",
+      "qnum": 3,
+      "question": "What is the procedure for transferring a call to another department?",
+      "answer": "The operator must first identify the correct department, inform the customer about the\ntransfer and the reason for it, and ideally perform a warm transfer by speaking to the\nreceiving agent to explain the issue before connecting the customer."
+    },
+    {
+      "id": "t3_q4",
+      "topic": "Call Center Operations Q&A",
+      "qnum": 4,
+      "question": "How should an operator handle an abusive or swearing customer?",
+      "answer": "The operator must remain calm and professional. They should issue a polite warning (e.g.,\n\"Sir/Madam, I want to help you, but I must ask you to refrain from using inappropriate\nlanguage\"). If the abuse continues after two warnings, the operator is authorized to\nterminate the call after notifying the customer."
+    },
+    {
+      "id": "t3_q5",
+      "topic": "Call Center Operations Q&A",
+      "qnum": 5,
+      "question": "What should be done if a customer reports a lost or stolen card?",
+      "answer": "The operator must immediately prioritize blocking the card to prevent unauthorized\ntransactions. Basic identification should be performed swiftly, the card must be blocked in\nthe system, and the customer should be guided on how to request a replacement."
+    },
+    {
+      "id": "t3_q6",
+      "topic": "Call Center Operations Q&A",
+      "qnum": 6,
+      "question": "How to handle a customer reporting an unrecognized charge?",
+      "answer": "After fully identifying the customer, the operator should review the transaction details with\nthem (merchant name, date, amount). If the customer still does not recognize it, the\noperator must temporarily block the card to prevent further fraud and guide the customer\nthrough the charge dispute (chargeback) process."
+    },
+    {
+      "id": "t3_q7",
+      "topic": "Call Center Operations Q&A",
+      "qnum": 7,
+      "question": "Can an operator speak to a third party (spouse, parent) about an account?",
+      "answer": "No confidential account information can be disclosed to a third party unless the primary\naccount holder is on the line, successfully passes identification, and gives explicit verbal\nauthorization to the operator to speak with the third party during that specific call."
+    },
+    {
+      "id": "t3_q8",
+      "topic": "Call Center Operations Q&A",
+      "qnum": 8,
+      "question": "What is the procedure when an ATM captures a customer's card?",
+      "answer": "The operator must identify the customer, block the captured card for security reasons,\ninform the customer about the retrieval process (or replacement process, depending on\nbank policy), and document the location and ID of the ATM."
+    },
+    {
+      "id": "t3_q9",
+      "topic": "Call Center Operations Q&A",
+      "qnum": 9,
+      "question": "How should an operator respond if the internal banking system goes offline?",
+      "answer": "The operator must apologize for the technical inconvenience, inform the customer that the\nsystems are temporarily undergoing maintenance or experiencing an outage, and advise\nthem to call back after a specified timeframe. No manual workarounds compromising\nsecurity should be attempted."
+    },
+    {
+      "id": "t3_q10",
+      "topic": "Call Center Operations Q&A",
+      "qnum": 10,
+      "question": "What steps are required to update a customer's phone number?",
+      "answer": "Because updating contact information carries high security risks, the operator must\nperform strict identification. Often, phone number updates cannot be done via a standard\ncall and may require the customer to visit a branch or use an authenticated mobile banking\napp, depending on the bank's specific security protocol."
+    },
+    {
+      "id": "t3_q11",
+      "topic": "Call Center Operations Q&A",
+      "qnum": 11,
+      "question": "How should an operator handle a dropped call?",
+      "answer": "If a call drops during an active conversation where the customer was already identified and\nan issue was being resolved, the operator should attempt to call the customer back at\nleast once using the registered phone number."
+    },
+    {
+      "id": "t3_q12",
+      "topic": "Call Center Operations Q&A",
+      "qnum": 12,
+      "question": "What should be done if the customer requests a PIN reset?",
+      "answer": "Operators generally cannot view or manually reset a PIN. The operator should guide the\ncustomer on how to reset their PIN via secure channels (e.g., mobile banking app, secure\nSMS service, or at a designated ATM) after verifying their identity."
+    },
+    {
+      "id": "t3_q13",
+      "topic": "Call Center Operations Q&A",
+      "qnum": 13,
+      "question": "How are VIP or Premium customers handled?",
+      "answer": "Calls from recognized VIP customers should be routed to a specialized Premium Support\nqueue if available. If answered by a standard operator, the agent should prioritize the\nrequest, use the appropriate premium greeting, and escalate to a VIP relationship manager\nif specialized financial advice is requested."
+    },
+    {
+      "id": "t3_q14",
+      "topic": "Call Center Operations Q&A",
+      "qnum": 14,
+      "question": "What if a customer asks for branch locations and working hours?",
+      "answer": "This is non-confidential information. The operator does not need to identify the customer\nand should promptly provide the nearest branch location, operating hours, and whether\nthe branch is currently open."
+    },
+    {
+      "id": "t3_q15",
+      "topic": "Call Center Operations Q&A",
+      "qnum": 15,
+      "question": "Can a customer cancel a bank transfer over the phone?",
+      "answer": "If the transfer is still pending or processing, the operator must identify the customer and\ncheck the system to see if cancellation is technically possible. If the funds have already\ncleared and settled into the recipient's account, the transfer cannot be canceled over the\nphone, and a formal dispute/recall process must be initiated."
+    },
+    {
+      "id": "t3_q16",
+      "topic": "Call Center Operations Q&A",
+      "qnum": 16,
+      "question": "What should the operator do if they do not speak the customer's language?",
+      "answer": "The operator should politely inform the customer (using standard phrases if possible) that\nthey do not speak the language and immediately transfer the call to an agent who speaks\nthe requested language, or to the appropriate dedicated language queue."
+    },
+    {
+      "id": "t3_q17",
+      "topic": "Call Center Operations Q&A",
+      "qnum": 17,
+      "question": "How is a deceased customer's account handled over the phone?",
+      "answer": "If a relative calls to report the passing of an account holder, the operator must express\ncondolences, freeze the account to prevent unauthorized access, and instruct the caller\non the legal documentation (death certificate, inheritance documents) required to be\npresented at a physical branch."
+    },
+    {
+      "id": "t3_q18",
+      "topic": "Call Center Operations Q&A",
+      "qnum": 18,
+      "question": "What information is needed to dispute an ATM cash withdrawal error?",
+      "answer": "The operator must collect the date, time, exact amount attempted, the location/ID of the\nATM, and whether any cash was dispensed at all. The operator will then file a formal\ndiscrepancy ticket for the back-office ATM reconciliation team."
+    },
+    {
+      "id": "t3_q19",
+      "topic": "Call Center Operations Q&A",
+      "qnum": 19,
+      "question": "How should operators handle complaints about bank staff?",
+      "answer": "The operator must listen empathetically without taking a defensive stance, collect specific\ndetails (branch location, staff name/description, date, and nature of the incident), and log\na formal complaint ticket to be reviewed by the branch management or HR department."
+    },
+    {
+      "id": "t3_q20",
+      "topic": "Call Center Operations Q&A",
+      "qnum": 20,
+      "question": "What should an operator do if a customer requests financial or investment advice?",
+      "answer": "Call center operators are typically not licensed financial advisors. The operator must\npolitely explain that they cannot provide direct financial advice and offer to schedule an\nappointment with a certified financial advisor or relationship manager at a branch."
+    }
+  ],
+  "corpus_texts": [
+    "MÖVZU: Discipline and Query Answering Rules\nSUAL: Which language should the operator speak and answer the call?\nCAVAB: According to clause 3.1.1 of the Contact Center division instructions, when answering a\ncall, the Operator must politely greet and listen carefully in the corresponding language\nselected in the IVR menu.\nID: t1_q1",
+    "MÖVZU: Discipline and Query Answering Rules\nSUAL: Should the operator state their surname?\nCAVAB: If the customer insists, the operator must also provide their surname.\nID: t1_q2",
+    "MÖVZU: Discipline and Query Answering Rules\nSUAL: Should the operator offer additional help at the end of the call?\nCAVAB: According to clause 3.1.2 of the Contact Center division instructions, at the end of the\nconversation, the operator must clarify whether the customer has any additional\nquestions. If the customer has no additional questions, it is necessary to thank them for\nthe call and say goodbye (e.g., \"Thank you for your call, goodbye\").\nID: t1_q3",
+    "MÖVZU: Discipline and Query Answering Rules\nSUAL: Should they ask if there are additional questions at the end of the call?\nCAVAB: According to clause 3.1.2 of the Contact Center division instructions, at the end of the\nconversation, the operator must clarify whether the customer has any additional\nquestions. If the customer has no additional questions, it is necessary to thank them for\nthe call and say goodbye (e.g., \"Thank you for your call, goodbye\").\nID: t1_q4",
+    "MÖVZU: Discipline and Query Answering Rules\nSUAL: When should I answer the call?\nCAVAB: According to clause 3.2.1 of the Contact Center division instructions, it is desirable to\nanswer the incoming call after the first ring, and it is mandatory by the third ring.\nID: t1_q5",
+    "MÖVZU: Discipline and Query Answering Rules\nSUAL: What information can be provided to the customer when they call?\nCAVAB: According to clause 3.2.2 of the Contact Center division instructions, when a customer\nwants to get information about their payment cards and related services, as well as other\nbank products, the operator must provide all types of information that do not require\ncustomer identification, do not contradict the Company's internal rules, are covered by the\nprocedures of the Contact Center division, and do not constitute bank secrecy.\nID: t1_q6",
+    "MÖVZU: Discipline and Query Answering Rules\nSUAL: How should I talk to the customer, and how should I behave?\nCAVAB: According to clause 3.2.3 of the Contact Center division instructions, the Operator must\nspeak politely with the customer, never raise their voice, avoid using unethical words,\nrefrain from expressing dissatisfaction, mocking, or treating them with criticism. They\nshould try to assist the applying customer, help eliminate problems related to card usage,\nand provide information about instances that can be applied to in any situation. The\nOperator must always be attentive to their interlocutor and ensure the provided\ninformation is understood correctly. The tone of voice should be clear and fluent, and they\nmust speak confidently at a volume the customer can hear. Speech must be rhythmic, and\nlong pauses should not be allowed.\nID: t1_q7",
+    "MÖVZU: Discipline and Query Answering Rules\nSUAL: Is there a communication standard for speaking with the customer?\nCAVAB: According to clause 3.2.3 of the Contact Center division instructions, the Operator must\nspeak politely with the customer, never raise their voice, avoid using unethical words,\nrefrain from expressing dissatisfaction, mocking, or treating them with criticism. They\nshould try to assist the applying customer, help eliminate problems related to card usage,\nand provide information about instances that can be applied to in any situation. The\nOperator must always be attentive to their interlocutor and ensure the provided\ninformation is understood correctly. The tone of voice should be clear and fluent, and they\nmust speak confidently at a volume the customer can hear. Speech must be rhythmic, and\nlong pauses should not be allowed.\nID: t1_q8",
+    "MÖVZU: Identification Rules. Identification\nSUAL: What is identification?\nCAVAB: According to clause 4.1.1 of the Contact Center division instructions, identification is the\nprocess of matching the name, surname, full card number, and codeword provided by the\ncardholder with the data in the system. To pass identification, the customer must provide\nthe required information without errors. The execution of requests entering the Customer\nService Department and answering questions related to the card is possible only if the\ncustomer is identified by a codeword or a one-time password replacing the codeword. A\nnumber of exceptions to this process are explained in the Contact Center division\nprocedure.\nID: t2_q1",
+    "MÖVZU: Identification Rules. Identification\nSUAL: What information is required during identification?\nCAVAB: According to the Contact Center division instructions, the name, surname, full card\nnumber, and codeword are required from the customer during identification. This\ninformation is checked by comparing it with the data available in the system. If any of the\ninformation is not provided correctly, the identification is considered unsuccessful, and\nthe execution of the request becomes impossible.\nID: t2_q2",
+    "MÖVZU: Identification Rules. Identification\nSUAL: Is identification possible without a codeword?\nCAVAB: In the absence of a codeword, identification can only be carried out via a one-time\npassword (OTP) replacing the codeword. The one-time password is sent to the customer's\ncontact means registered in the system and is valid only for a certain period. If this\npassword is provided correctly, the customer is considered identified.\nID: t2_q3",
+    "MÖVZU: Identification Rules. Identification\nSUAL: What information can be provided to a customer who fails identification?\nCAVAB: No confidential information related to the card or account is provided to a customer who\nfails identification. In this case, only general information and procedure rules can be\nexplained to the customer. Card transactions and answering questions are only possible\nafter full identification.\nID: t2_q4",
+    "MÖVZU: Identification Rules. Identification\nSUAL: Are there exceptions in the identification process?\nCAVAB: Exceptions to the identification process are specifically indicated in the procedure of the\nContact Center division. These exceptions are intended for certain services and special\nsituations and can only be applied in accordance with the instructions. The operator must\ncheck the relevant procedure requirements before applying exceptional cases.\nID: t2_q5",
+    "MÖVZU: Call Center Operations Q&A\nSUAL: How should an operator place a customer on hold?\nCAVAB: Before placing a customer on hold, the operator must ask for the customer's permission,\nexplain exactly why the hold is necessary (e.g., \"May I place you on a brief hold while I\ncheck your account history?\"), and wait for the customer's affirmative response.\nID: t3_q1",
+    "MÖVZU: Call Center Operations Q&A\nSUAL: What is the maximum allowed hold time?\nCAVAB: A customer should not be left on hold for more than 2 minutes without an update. If the\nissue requires more time, the operator must return to the line, inform the customer of the\ndelay, and ask if they wish to continue holding or prefer a callback.\nID: t3_q2",
+    "MÖVZU: Call Center Operations Q&A\nSUAL: What is the procedure for transferring a call to another department?\nCAVAB: The operator must first identify the correct department, inform the customer about the\ntransfer and the reason for it, and ideally perform a warm transfer by speaking to the\nreceiving agent to explain the issue before connecting the customer.\nID: t3_q3",
+    "MÖVZU: Call Center Operations Q&A\nSUAL: How should an operator handle an abusive or swearing customer?\nCAVAB: The operator must remain calm and professional. They should issue a polite warning (e.g.,\n\"Sir/Madam, I want to help you, but I must ask you to refrain from using inappropriate\nlanguage\"). If the abuse continues after two warnings, the operator is authorized to\nterminate the call after notifying the customer.\nID: t3_q4",
+    "MÖVZU: Call Center Operations Q&A\nSUAL: What should be done if a customer reports a lost or stolen card?\nCAVAB: The operator must immediately prioritize blocking the card to prevent unauthorized\ntransactions. Basic identification should be performed swiftly, the card must be blocked in\nthe system, and the customer should be guided on how to request a replacement.\nID: t3_q5",
+    "MÖVZU: Call Center Operations Q&A\nSUAL: How to handle a customer reporting an unrecognized charge?\nCAVAB: After fully identifying the customer, the operator should review the transaction details with\nthem (merchant name, date, amount). If the customer still does not recognize it, the\noperator must temporarily block the card to prevent further fraud and guide the customer\nthrough the charge dispute (chargeback) process.\nID: t3_q6",
+    "MÖVZU: Call Center Operations Q&A\nSUAL: Can an operator speak to a third party (spouse, parent) about an account?\nCAVAB: No confidential account information can be disclosed to a third party unless the primary\naccount holder is on the line, successfully passes identification, and gives explicit verbal\nauthorization to the operator to speak with the third party during that specific call.\nID: t3_q7",
+    "MÖVZU: Call Center Operations Q&A\nSUAL: What is the procedure when an ATM captures a customer's card?\nCAVAB: The operator must identify the customer, block the captured card for security reasons,\ninform the customer about the retrieval process (or replacement process, depending on\nbank policy), and document the location and ID of the ATM.\nID: t3_q8",
+    "MÖVZU: Call Center Operations Q&A\nSUAL: How should an operator respond if the internal banking system goes offline?\nCAVAB: The operator must apologize for the technical inconvenience, inform the customer that the\nsystems are temporarily undergoing maintenance or experiencing an outage, and advise\nthem to call back after a specified timeframe. No manual workarounds compromising\nsecurity should be attempted.\nID: t3_q9",
+    "MÖVZU: Call Center Operations Q&A\nSUAL: What steps are required to update a customer's phone number?\nCAVAB: Because updating contact information carries high security risks, the operator must\nperform strict identification. Often, phone number updates cannot be done via a standard\ncall and may require the customer to visit a branch or use an authenticated mobile banking\napp, depending on the bank's specific security protocol.\nID: t3_q10",
+    "MÖVZU: Call Center Operations Q&A\nSUAL: How should an operator handle a dropped call?\nCAVAB: If a call drops during an active conversation where the customer was already identified and\nan issue was being resolved, the operator should attempt to call the customer back at\nleast once using the registered phone number.\nID: t3_q11",
+    "MÖVZU: Call Center Operations Q&A\nSUAL: What should be done if the customer requests a PIN reset?\nCAVAB: Operators generally cannot view or manually reset a PIN. The operator should guide the\ncustomer on how to reset their PIN via secure channels (e.g., mobile banking app, secure\nSMS service, or at a designated ATM) after verifying their identity.\nID: t3_q12",
+    "MÖVZU: Call Center Operations Q&A\nSUAL: How are VIP or Premium customers handled?\nCAVAB: Calls from recognized VIP customers should be routed to a specialized Premium Support\nqueue if available. If answered by a standard operator, the agent should prioritize the\nrequest, use the appropriate premium greeting, and escalate to a VIP relationship manager\nif specialized financial advice is requested.\nID: t3_q13",
+    "MÖVZU: Call Center Operations Q&A\nSUAL: What if a customer asks for branch locations and working hours?\nCAVAB: This is non-confidential information. The operator does not need to identify the customer\nand should promptly provide the nearest branch location, operating hours, and whether\nthe branch is currently open.\nID: t3_q14",
+    "MÖVZU: Call Center Operations Q&A\nSUAL: Can a customer cancel a bank transfer over the phone?\nCAVAB: If the transfer is still pending or processing, the operator must identify the customer and\ncheck the system to see if cancellation is technically possible. If the funds have already\ncleared and settled into the recipient's account, the transfer cannot be canceled over the\nphone, and a formal dispute/recall process must be initiated.\nID: t3_q15",
+    "MÖVZU: Call Center Operations Q&A\nSUAL: What should the operator do if they do not speak the customer's language?\nCAVAB: The operator should politely inform the customer (using standard phrases if possible) that\nthey do not speak the language and immediately transfer the call to an agent who speaks\nthe requested language, or to the appropriate dedicated language queue.\nID: t3_q16",
+    "MÖVZU: Call Center Operations Q&A\nSUAL: How is a deceased customer's account handled over the phone?\nCAVAB: If a relative calls to report the passing of an account holder, the operator must express\ncondolences, freeze the account to prevent unauthorized access, and instruct the caller\non the legal documentation (death certificate, inheritance documents) required to be\npresented at a physical branch.\nID: t3_q17",
+    "MÖVZU: Call Center Operations Q&A\nSUAL: What information is needed to dispute an ATM cash withdrawal error?\nCAVAB: The operator must collect the date, time, exact amount attempted, the location/ID of the\nATM, and whether any cash was dispensed at all. The operator will then file a formal\ndiscrepancy ticket for the back-office ATM reconciliation team.\nID: t3_q18",
+    "MÖVZU: Call Center Operations Q&A\nSUAL: How should operators handle complaints about bank staff?\nCAVAB: The operator must listen empathetically without taking a defensive stance, collect specific\ndetails (branch location, staff name/description, date, and nature of the incident), and log\na formal complaint ticket to be reviewed by the branch management or HR department.\nID: t3_q19",
+    "MÖVZU: Call Center Operations Q&A\nSUAL: What should an operator do if a customer requests financial or investment advice?\nCAVAB: Call center operators are typically not licensed financial advisors. The operator must\npolitely explain that they cannot provide direct financial advice and offer to schedule an\nappointment with a certified financial advisor or relationship manager at a branch.\nID: t3_q20"
+  ],
+  "embed_model": "BAAI/bge-base-en-v1.5"
+}
