@@ -9,3 +9,6 @@ __pycache__/
 # Editor / OS
 .vscode/
 .DS_Store
+
+# Local Claude Code instructions (not published)
+CLAUDE.md

@@ -48,6 +48,7 @@
   summary { cursor: pointer; font-weight: 600; font-size: .92rem; }
   details .q { font-weight: 600; margin: 8px 0 4px; }
   details .a { white-space: pre-wrap; margin: 0 0 4px; color: var(--muted); }
+  .bubble.welcome { white-space: normal; }
   .intro { color: var(--muted); }
   .suggestions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
   .suggestions button {
@@ -80,7 +81,7 @@
 
 <main id="chat" aria-live="polite">
   <div class="msg bot">
-    <div class="bubble">
+    <div class="bubble welcome">
       <span class="intro">Ask about operator rules, customer identification, card issues, PIN resets or ATM disputes, in English or Azerbaijani. Try one of these:</span>
       <div class="suggestions" id="suggestions">
         <button type="button">What should be done if the customer requests a PIN reset?</button>
@@ -125,7 +126,8 @@
       const details = el("details");
       details.appendChild(el("summary", "", `📄 Source ${s.rank} — ${s.topic} · Q${s.qnum}`));
       details.appendChild(el("p", "q", s.question));
-      details.appendChild(el("p", "a", s.answer));
+      // The PDF wraps lines mid-sentence; keep blank-line paragraph breaks, join the rest.
+      details.appendChild(el("p", "a", s.answer.replace(/([^\n])\n(?!\n)/g, "$1 ")));
       bubble.appendChild(details);
     }
   }
