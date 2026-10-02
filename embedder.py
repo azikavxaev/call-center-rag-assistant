@@ -1,19 +1,11 @@
 import re
 import fitz  # PyMuPDF
 import json
-import numpy as np
-import torch
-from typing import List, Dict
-from sentence_transformers import SentenceTransformer, util
-from dotenv import load_dotenv
 from typing import List, Dict, Any
 
-# Initialize environment and device
-load_dotenv()
-DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
+import rag
 
 pdf_path = 'FAQ_RAG.pdf'
-EMBED_MODEL = "BAAI/bge-base-en-v1.5"
 
 def extract_pdf_text(pdf_path: str) -> str:
     doc = fitz.open(pdf_path)
@@ -123,38 +115,20 @@ if __name__ == "__main__":
     # 2. Prepare texts for embedding
     corpus_texts = [make_embed_text(it) for it in faq_items]
 
-    # 3. Generate embeddings
-    embedder = SentenceTransformer(EMBED_MODEL, device=DEVICE)
-    embeddings = embedder.encode(
-        corpus_texts,
-        batch_size=32,
-        convert_to_tensor=True,
-        show_progress_bar=True
-    ).to(DEVICE)
+    # 3. Generate normalized embeddings with OpenAI
+    rag.load_env_file()
+    embeddings = rag.embed(corpus_texts)
 
-    # Normalize embeddings for cosine similarity
-    embeddings = util.normalize_embeddings(embeddings)
-
-    # 4. Save embeddings and metadata
-    np.save("faq_embeddings.npy", embeddings.detach().cpu().numpy())
-
-    with open("faq_meta.json", "w", encoding="utf-8") as f:
+    # 4. Save items and embeddings together; rag.py loads this file at runtime
+    with open(rag.INDEX_PATH, "w", encoding="utf-8") as f:
         json.dump(
-            {"items": faq_items, "corpus_texts": corpus_texts, "embed_model": EMBED_MODEL},
+            {
+                "embed_model": rag.EMBED_MODEL,
+                "items": faq_items,
+                "corpus_texts": corpus_texts,
+                "embeddings": [[round(x, 6) for x in v] for v in embeddings],
+            },
             f,
             ensure_ascii=False,
-            indent=2
         )
-    print("Embeddings and metadata saved successfully.")
-
-    # 5. Load and verify (Optional - from your last notebook cell)
-    with open("faq_meta.json", "r", encoding="utf-8") as f:
-        meta = json.load(f)
-
-    loaded_faq_items = meta["items"]
-    loaded_corpus_texts = meta["corpus_texts"]
-    loaded_embedder = SentenceTransformer(meta["embed_model"], device='cpu')
-
-    emb_np = np.load("faq_embeddings.npy")
-    loaded_embeddings = torch.tensor(emb_np, dtype=torch.float32)
-    print(f"Successfully loaded embeddings tensor of size: {loaded_embeddings.shape}")
+    print(f"Saved {len(embeddings)} embeddings ({len(embeddings[0])} dims) to {rag.INDEX_PATH}")

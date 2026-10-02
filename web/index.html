@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Call Center AI Assistant</title>
+<meta name="description" content="RAG chatbot that answers call-center questions only from an internal FAQ, citing its sources.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📞</text></svg>">
+<style>
+  :root {
+    --bg: #f6f7f9; --surface: #ffffff; --text: #1b1f24; --muted: #5d6673;
+    --border: #dfe3e8; --accent: #2457d6; --accent-text: #ffffff;
+    --user-bg: #2457d6; --user-text: #ffffff; --bot-bg: #ffffff;
+    --source-bg: #f1f4f9; --warn: #9a5b00; --error: #b42318;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1216; --surface: #171b21; --text: #e6e9ee; --muted: #9aa3ae;
+      --border: #2a313a; --accent: #6d95ff; --accent-text: #0f1216;
+      --user-bg: #3b64d8; --user-text: #ffffff; --bot-bg: #1c2129;
+      --source-bg: #222833; --warn: #f0b45a; --error: #ff8a80;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex; flex-direction: column;
+  }
+  header, main, footer, form { width: 100%; max-width: 820px; margin: 0 auto; padding-left: 16px; padding-right: 16px; }
+  header { padding-top: 28px; padding-bottom: 8px; }
+  h1 { margin: 0; font-size: 1.6rem; }
+  header p { margin: 4px 0 0; color: var(--muted); }
+  main { flex: 1; padding-top: 12px; padding-bottom: 12px; }
+  .msg { display: flex; margin: 12px 0; }
+  .msg.user { justify-content: flex-end; }
+  .bubble {
+    max-width: 85%; padding: 10px 14px; border-radius: 14px;
+    white-space: pre-wrap; overflow-wrap: anywhere;
+  }
+  .user .bubble { background: var(--user-bg); color: var(--user-text); border-bottom-right-radius: 4px; }
+  .bot .bubble { background: var(--bot-bg); border: 1px solid var(--border); border-bottom-left-radius: 4px; }
+  .bot.rejected .bubble { color: var(--warn); }
+  .bot.error .bubble { color: var(--error); }
+  details { margin-top: 10px; background: var(--source-bg); border-radius: 8px; padding: 6px 10px; white-space: normal; }
+  details + details { margin-top: 6px; }
+  summary { cursor: pointer; font-weight: 600; font-size: .92rem; }
+  details .q { font-weight: 600; margin: 8px 0 4px; }
+  details .a { white-space: pre-wrap; margin: 0 0 4px; color: var(--muted); }
+  .intro { color: var(--muted); }
+  .suggestions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  .suggestions button {
+    border: 1px solid var(--border); background: var(--surface); color: var(--text);
+    border-radius: 999px; padding: 6px 12px; font: inherit; font-size: .9rem; cursor: pointer; text-align: left;
+  }
+  .suggestions button:hover { border-color: var(--accent); }
+  .typing span { display: inline-block; width: 7px; height: 7px; margin-right: 4px; border-radius: 50%; background: var(--muted); animation: blink 1.2s infinite; }
+  .typing span:nth-child(2) { animation-delay: .2s; } .typing span:nth-child(3) { animation-delay: .4s; }
+  @keyframes blink { 0%, 80%, 100% { opacity: .25; } 40% { opacity: 1; } }
+  form { position: sticky; bottom: 0; background: var(--bg); padding-top: 10px; padding-bottom: 14px; display: flex; gap: 8px; }
+  textarea {
+    flex: 1; resize: none; min-height: 46px; max-height: 160px; padding: 11px 12px;
+    border: 1px solid var(--border); border-radius: 12px; background: var(--surface); color: var(--text); font: inherit;
+  }
+  textarea:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+  form button {
+    border: 0; border-radius: 12px; padding: 0 18px; background: var(--accent); color: var(--accent-text);
+    font: inherit; font-weight: 600; cursor: pointer;
+  }
+  form button:disabled { opacity: .5; cursor: default; }
+  footer { color: var(--muted); font-size: .8rem; padding-bottom: 16px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>📞 Call Center AI Assistant</h1>
+  <p>Answers only from the internal call-center FAQ, and shows the source for every answer.</p>
+</header>
+
+<main id="chat" aria-live="polite">
+  <div class="msg bot">
+    <div class="bubble">
+      <span class="intro">Ask about operator rules, customer identification, card issues, PIN resets or ATM disputes, in English or Azerbaijani. Try one of these:</span>
+      <div class="suggestions" id="suggestions">
+        <button type="button">What should be done if the customer requests a PIN reset?</button>
+        <button type="button">How to handle a customer reporting an unrecognized charge?</button>
+        <button type="button">Are there exceptions in the identification process?</button>
+        <button type="button">Müştəri PIN kodunu yeniləmək istəyir, nə etməliyəm?</button>
+      </div>
+    </div>
+  </div>
+</main>
+
+<form id="ask">
+  <textarea id="question" rows="1" maxlength="500" placeholder="Ask any question…" aria-label="Your question" required></textarea>
+  <button id="send" type="submit">Send</button>
+</form>
+<footer>RAG demo · OpenAI embeddings + gpt-4o-mini · AWS Lambda, S3 &amp; CloudFront</footer>
+
+<script>
+  const chat = document.getElementById("chat");
+  const form = document.getElementById("ask");
+  const input = document.getElementById("question");
+  const send = document.getElementById("send");
+
+  function el(tag, className, text) {
+    const node = document.createElement(tag);
+    if (className) node.className = className;
+    if (text !== undefined) node.textContent = text;  // textContent: never render model output as HTML
+    return node;
+  }
+
+  function addMessage(role, text, extraClass) {
+    const msg = el("div", `msg ${role}${extraClass ? " " + extraClass : ""}`);
+    const bubble = el("div", "bubble", text);
+    msg.appendChild(bubble);
+    chat.appendChild(msg);
+    msg.scrollIntoView({ behavior: "smooth", block: "end" });
+    return bubble;
+  }
+
+  function addSources(bubble, sources) {
+    for (const s of sources) {
+      const details = el("details");
+      details.appendChild(el("summary", "", `📄 Source ${s.rank} — ${s.topic} · Q${s.qnum}`));
+      details.appendChild(el("p", "q", s.question));
+      details.appendChild(el("p", "a", s.answer));
+      bubble.appendChild(details);
+    }
+  }
+
+  async function sha256Hex(text) {
+    // CloudFront signs requests to the Lambda origin; POST bodies need their SHA-256 in this header.
+    const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
+    return Array.from(new Uint8Array(digest), b => b.toString(16).padStart(2, "0")).join("");
+  }
+
+  async function ask(question) {
+    addMessage("user", question);
+    const pending = addMessage("bot", "");
+    pending.innerHTML = '<span class="typing"><span></span><span></span><span></span></span>';
+    send.disabled = true;
+    try {
+      const body = JSON.stringify({ question });
+      const res = await fetch("/api/ask", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "x-amz-content-sha256": await sha256Hex(body) },
+        body,
+      });
+      const data = await res.json().catch(() => ({}));
+      pending.parentElement.remove();
+      if (!res.ok) {
+        addMessage("bot", data.error || "Something went wrong. Please try again.", "error");
+        return;
+      }
+      const bubble = addMessage("bot", data.answer, data.error ? "error" : data.rejected ? "rejected" : "");
+      addSources(bubble, data.sources || []);
+    } catch (err) {
+      pending.parentElement.remove();
+      addMessage("bot", "Could not reach the server. Please check your connection and try again.", "error");
+    } finally {
+      send.disabled = false;
+      input.focus();
+    }
+  }
+
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    const question = input.value.trim();
+    if (!question || send.disabled) return;
+    input.value = "";
+    input.style.height = "";
+    ask(question);
+  });
+
+  input.addEventListener("keydown", e => {
+    if (e.key === "Enter" && !e.shiftKey) { e.preventDefault(); form.requestSubmit(); }
+  });
+  input.addEventListener("input", () => {
+    input.style.height = "auto";
+    input.style.height = Math.min(input.scrollHeight, 160) + "px";
+  });
+
+  document.getElementById("suggestions").addEventListener("click", e => {
+    if (e.target.tagName === "BUTTON" && !send.disabled) ask(e.target.textContent);
+  });
+</script>
+</body>
+</html>
